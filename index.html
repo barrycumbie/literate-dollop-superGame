@@ -31,7 +31,7 @@
           </li>
           
           <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
           </li>
         </ul>
 
@@ -41,15 +41,49 @@
 
   <div class="container-fluid vh-100">
 
-  <!-- game control row-->
-  <div class="row m-2 p-3">
-    <div class="col-md-12 border border-2 ">
-      game stuff / controls goes here 
-    </div>
-  </div><!-- closes game control row -->
+ <!-- game control row-->
+<div class="row m-1 p-3">
+  <div class="col-md-10 shadow">
+    <!-- todo: rules -->
+    <div class="d-flex m-2">
+     
+      <!-- 1️⃣ Enter Player Name -->
+      <div id="inputBox" class="d-flex justify-content-center">
+        <span class="input-group-text">1️⃣ Enter Player Name:</span>
+        <input id="enteredPlayerName" class="form-control" placeholder="what's ur name?">
+        <button id="submitPlayerName" class="btn btn-primary btn-md">submit</button> 
+      </div>
+   
+      <!-- 2️⃣ Greeting -->
+      <div id="nameBox" class="d-flex">
+        <span id="displayPlayerName" class="input-group-text">2️⃣ 
+        <button id="playGame" type="button" class="btn btn-warning">Play!</button>  
+      </div>
+    
+      <!-- 3️⃣ Drag Kitty -->
+      <div id="goBox" class="d-flex">
+         <span class="input-group-text">  3️⃣ drag kitty to a home!</span>
+
+      </div>
+    </div> 
+    <span class="float-end align-bottom">
+      <a id="resetGame" class="fst-italic">reset</a>
+    </span>
+  </div><!-- closes rules cols -->
   
+  <div class="col-md-2 shadow">
+    <!-- Score Box -->
+    <div class="d-flex flex-column align-items-center justify-content-center  bg-light ms-auto"
+        style="width: 90x; height: 90px; min-width: 90px;">
+      <span class="fw-bold fs-5">Score</span>
+      <span class="fs-4"><span id="playerScore">0</span></span>
+      <button id="playAgain" type="button" class="btn btn-warning btn-sm mt-1">play again</button>
+    </div>
+  </div><!-- closes score col -->
+</div><!-- closes game control row -->
+
   <!-- game board row -->
-  <div class="row m-4 h-75 border border-3 border-info rounded-3">
+  <div class="row m-1 h-75 border border-3 border-info rounded-3">
  
     <!-- the game board -->
     <div id="gameBoard" class="col-md-12 h-100">
@@ -59,9 +93,9 @@
        
       <!-- three targets -->
       <div class="h-100 d-flex flex-column align-items-end gap-3 justify-content-center pe-5">
-        <div class="gameTargets bg-primary rounded h-25 w-25"></div>
-        <div class="gameTargets bg-warning rounded h-25 w-25"></div>
-        <div class="gameTargets bg-success rounded h-25 w-25"></div>
+        <div id="blueHouse" class="gameTargets bg-primary rounded h-25 w-25"></div>
+        <div id="yellowHouse" class="gameTargets bg-warning rounded h-25 w-25"></div>
+        <div id="greenHouse" class="gameTargets bg-success rounded h-25 w-25"></div>
       </div>
 
     </div><!-- closes column -->
@@ -74,9 +108,13 @@
   <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
       © 2025 Copyright:
-      <a class="text-body" href="https://barrycumbie.com" target="_blank"`>bc|376</a> | 
-      <a class="text-body" target="_blank" href="images/superGameWireframe.jpg">wireframe</a>
+      <a class="text-body" href="https://barrycumbie.com" target="_blank">bc|376</a> | 
+      <a class="text-body" target="_blank" href="images/superGameWireframe.jpg">wireframe</a> | 
+      <a class="text-body" target="_blank" href="https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fbarrycumbie.github.io%2Fliterate-dollop-superGame%2F">check the validity of this page</a> |
+      <a class="text-body" target="_blank" href="https://wave.webaim.org/report#/https://barrycumbie.github.io/literate-dollop-superGame/">check the accessibility of this page</a> 
     </div>
+
+  
     <!-- Copyright -->
   </footer>
 
